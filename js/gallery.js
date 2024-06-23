@@ -70,8 +70,9 @@ let str = '<ul class="gallery">';
 images.forEach((elm) => {
   str += '<li class="gallery-item"> <a class="gallery-link" href=' + elm.original + '> <img class="gallery-image" src=' + elm.preview + ' data-source=' + elm.original + ' alt=' + elm.description + '/> </a></li> ';
 });
-str += '</ul> <script src=" https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js "></script> <link href=" https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css " rel="stylesheet">';
+str += '</ul> <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>';
 body.insertAdjacentHTML("afterbegin", str);
+import * as basicLightbox from "basiclightbox";
 const ul = document.querySelector('ul');
 ul.addEventListener('click', hundlerProdukt);
 function hundlerProdukt(evt){
