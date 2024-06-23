@@ -63,8 +63,8 @@ const images = [
     description: 'Lighthouse Coast Sea',
   },
 ];
-const head = document.querySelector('head');
-head.insertAdjacentHTML("beforeend", '<link href=" https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css " rel="stylesheet">');
+//const head = document.querySelector('head');
+//head.insertAdjacentHTML("beforeend", '<link href=" https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css " rel="stylesheet">');
 const body = document.querySelector('body');
 let str = '<ul class="gallery">';
 images.forEach((elm) => {
