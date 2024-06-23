@@ -70,9 +70,8 @@ let str = '<ul class="gallery">';
 images.forEach((elm) => {
   str += '<li class="gallery-item"> <a class="gallery-link" href=' + elm.original + '> <img class="gallery-image" src=' + elm.preview + ' data-source=' + elm.original + ' alt=' + elm.description + '/> </a></li> ';
 });
-str += '</ul> <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>';
+str += '</ul>';// <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>';
 body.insertAdjacentHTML("afterbegin", str);
-import * as basicLightbox from "basiclightbox";
 const ul = document.querySelector('ul');
 ul.addEventListener('click', hundlerProdukt);
 function hundlerProdukt(evt){
@@ -84,7 +83,7 @@ function hundlerProdukt(evt){
   //console.log('sddvds');
   console.log('Data-source', rez);
   evt.preventDefault();
-  const instance = basicLightbox.create('<img src="https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg" />');
+  const instance = basicLightbox.create('<img src="'+ evt.target.dataset.source + '" />');
   instance.show()
   //basicLightbox.create('<img src="${evt.target.dataset.source}" />').show();
 };
